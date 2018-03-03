@@ -1,3 +1,4 @@
+
 def binary_search(search_itens, item):
     min_position = 0
     high_position = len(search_itens) - 1
@@ -13,6 +14,26 @@ def binary_search(search_itens, item):
             min_position = mid + 1
 
     return None
+
+
+def order_by_selection(arr):
+    new_arr = []
+    for i in range(len(arr)):
+        lower = _find_lower_index(arr)
+        new_arr.append(arr.pop(lower))
+
+    return new_arr
+
+
+def _find_lower_index(arr):
+    lower = arr[0]
+    lower_index = 0
+    for i in range(1, len(arr)):
+        if arr[i] < lower:
+            lower = arr[i]
+            lower_index = i
+
+    return lower_index
 
 
 
