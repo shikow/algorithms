@@ -1,4 +1,5 @@
 
+
 def binary_search(search_itens, item):
     min_position = 0
     high_position = len(search_itens) - 1
@@ -23,6 +24,13 @@ def order_by_selection(arr):
         new_arr.append(arr.pop(lower))
 
     return new_arr
+
+
+def recursive_factorial(num):
+    if num == 1:
+        return 1
+    else:
+        return recursive_factorial(num - 1)
 
 
 def _find_lower_index(arr):
