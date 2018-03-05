@@ -1,5 +1,5 @@
-from alaska.algorithms import binary_search
-from alaska.algorithms import order_by_selection
+from alaska.algorithms import binary_search, order_by_selection, recursive_factorial
+
 
 
 def test_binary_search():
@@ -10,6 +10,8 @@ def test_order_by_selection():
     arr = [5, 3, 6, 2, 10]
     print(order_by_selection(arr))
 
+def test_recursive_factorial():
+    print(recursive_factorial(5))
 
 
-test_order_by_selection()
+test_recursive_factorial()
