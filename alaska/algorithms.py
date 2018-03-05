@@ -69,7 +69,6 @@ def quicksort(arr):
         return quicksort(lowers) + [pivot] + quicksort(highers)
 
 
-
 def _find_lower_index(arr):
     lower = arr[0]
     lower_index = 0
