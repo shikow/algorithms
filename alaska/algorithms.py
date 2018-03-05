@@ -62,8 +62,8 @@ def quicksort(arr):
     if len(arr) <= 1:
         return arr
     else:
-        next = randrange(len(arr))
-        pivot = arr[next]
+        next_position = randrange(len(arr))
+        pivot = arr[next_position]
         lowers = [item for i, item in enumerate(arr) if item <= pivot and i != next]
         highers = [item for i, item in enumerate(arr) if item > pivot and i != next]
         return quicksort(lowers) + [pivot] + quicksort(highers)
