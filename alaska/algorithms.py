@@ -59,7 +59,7 @@ def recursive_max_value(arr):
 
 def quicksort(arr):
 
-    if len(arr) <=1:
+    if len(arr) <= 1:
         return arr
     else:
         next = randrange(len(arr))
