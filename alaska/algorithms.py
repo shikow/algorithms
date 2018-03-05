@@ -1,4 +1,4 @@
-
+from random import randrange
 
 def binary_search(search_itens, item):
     min_position = 0
@@ -55,6 +55,19 @@ def recursive_max_value(arr):
         return arr[0] if arr[0] > arr[1] else arr[1]
     max_value = recursive_max_value(arr[1:])
     return arr[0] if arr[0] > max_value else max_value
+
+
+def quicksort(arr):
+
+    if len(arr) <=1:
+        return arr
+    else:
+        next = randrange(len(arr))
+        pivot = arr[next]
+        lowers = [item for i, item in enumerate(arr) if item <= pivot and i != next]
+        highers = [item for i, item in enumerate(arr) if item > pivot and i != next]
+        return quicksort(lowers) + [pivot] + quicksort(highers)
+
 
 
 def _find_lower_index(arr):

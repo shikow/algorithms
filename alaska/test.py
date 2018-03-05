@@ -1,4 +1,4 @@
-from alaska.algorithms import binary_search, order_by_selection, recursive_factorial
+from alaska.algorithms import binary_search, order_by_selection, recursive_factorial, quicksort
 
 
 
@@ -14,4 +14,8 @@ def test_recursive_factorial():
     print(recursive_factorial(5))
 
 
-test_recursive_factorial()
+def test_quick_sort():
+    print(quicksort([3, 6, 7, 1, 2, 12, 9, 4, 5, 3, 6]))
+
+
+test_quick_sort()
